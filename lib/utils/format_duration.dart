@@ -1,0 +1,8 @@
+class FormatDuration {
+  String formatDuration(Duration duration) {
+    String twoDigits(int x) => x.toString().padLeft(2, '0');
+    String minutes = twoDigits(duration.inMinutes.remainder(60));
+    String seconds = twoDigits(duration.inSeconds.remainder(60));
+    return '$minutes:$seconds';
+  }
+}
